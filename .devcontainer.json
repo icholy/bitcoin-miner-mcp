@@ -1,5 +1,6 @@
 {
   "image": "nixos/nix",
   "postCreateCommand": "nix profile install --accept-flake-config nixpkgs#devenv",
-  "postAttachCommand": "devenv shell"
+  "postAttachCommand": "devenv shell",
+  "remoteUser": "root"
 }

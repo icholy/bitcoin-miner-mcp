@@ -1,6 +1,12 @@
 {
-  "image": "nixos/nix",
-  "postCreateCommand": "nix profile install --accept-flake-config nixpkgs#devenv",
-  "postAttachCommand": "devenv shell",
-  "remoteUser": "root"
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "mkhl.direnv"
+      ]
+    }
+  },
+  "image": "ghcr.io/cachix/devenv/devcontainer:latest",
+  "overrideCommand": false,
+  "updateContentCommand": "devenv test"
 }

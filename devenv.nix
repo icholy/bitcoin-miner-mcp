@@ -14,4 +14,5 @@
   };
 
   claude.code.enable = true;
+  devcontainer.enable = true;
 }

@@ -1,11 +1,5 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-20-bookworm",
-  
-  "features": {
-    "ghcr.io/devcontainers/features/git:1": {},
-    "ghcr.io/devcontainers/features/github-cli:1": {},
-    "ghcr.io/jungaretti/features/ripgrep:1": {}
-  },
-  
-  "postCreateCommand": "npm install -g @anthropic-ai/claude-code"
+  "image": "nixos/nix",
+  "postCreateCommand": "nix profile install --accept-flake-config nixpkgs#devenv",
+  "postAttachCommand": "devenv shell"
 }
